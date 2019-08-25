@@ -1,0 +1,28 @@
+
+***We originally attempted to pull our data from the OpenWeather api and merge the data with alchemy but because of time constraints ultimately chose two different csvs from Kaggle and 14ers.com. We created a new database in pg4. To load our data chose to upload an .etl file to Pg4. Our database can be used to reference various 14er data before planning an outdoor activity. 
+
+Extract: your original data sources and how the data was formatted (CSV, JSON, pgAdmin 4, etc).
+
+1. Kaggle - csv 
+2. 14ers - csv 
+API: bf92df9976c606200718381d7f1494 (openweather) 
+
+DATA (cleaning, joining, filtering, aggregating, etc).
+
+1. Pandas: Multiple CSVs (14ers/ Kaggle) 
+	A. Had to remove special characters 
+	B. Merged csvs 
+	Trial/Error: api, alchemy
+
+Transform: what data cleaning or transformation was required.
+
+Production database to load the data into (relational or non-relational).
+Load: the final database, tables/collections, and why this was chosen. 
+
+2. pg4: Created New DataBase (relational) 
+	A. Created an .etl file from our merged data 
+	B. Uploaded to a new database pg4
+	C. Determined PK (MountainPeak)
+	Trial/Error - PK originally attempted 		lat/long, constantly updating .etl
+
+We chose this route based on group knowledge and time constraints. 
